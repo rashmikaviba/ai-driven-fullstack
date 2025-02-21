@@ -1,14 +1,11 @@
-import s from "./greating.module.css";
-
-function Greating (){
 
 
-    const name ="madusanka"
-    const age  = 24
-    return(
-        <h1 className={s.titl}>hello {age > 25 && age <27 ? "adult":"child"}  ! </h1>
+const Greating = (props) => { 
+    return (
+      <h1 className="text-red-500 text-4xl font-bold">
+        Hello, my name is {props.name} and I am {props.age} years old.
+      </h1>
     );
-
-};
-
-export default Greating;
+  };
+  
+  export default Greating;

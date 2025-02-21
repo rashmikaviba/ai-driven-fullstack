@@ -1,24 +1,24 @@
-import Greating from "./greating";
-import Button from "./button";
-import Hellow from "./hellow";
-import s from "./App.module.css";
-import "./index.css";
+// import Greating from "./greating";
+// import { Button } from "@/components/ui/button";
+import Navbar from "@/components/ui/navigation";  
+import Hero from "./components/ui/hero";
+import HotelListing from "@/components/ui/hotelcard";  
+
+
 
 function App() {
+
+
   return (
-   <div>
- <Greating/>
- <h1 className={s.title}> rashmika bvibashana</h1>
-  <Button/>
-  <Button/>
-  <Button/>
-  <Hellow/>
-  <Button/>
+<>
+
+<Navbar/>
+<Hero/>
+<HotelListing/>
 
 
-  
-   </div>
+</>
   )
-}
+};
 
 export default App;

@@ -1,18 +1,14 @@
 
-import "./index.css";
-function Button (){
-    const handleclick = ()=>{
+function Button (props){
 
-       alert("button rashmika");
-    };
-    
 return(
     <>
 
-    <button className="bg-blue-500 text-white p-4 rounded-lg" onClick={handleclick}>
-        read me
+    <button className="bg-blue-500 text-white p-4 rounded-lg mar mx-5 my-5" 
+    onClick={props.onClick}>
+       {props.children}
     </button>
     </>
 );
 };
-export default Button;
+export default Button; 
