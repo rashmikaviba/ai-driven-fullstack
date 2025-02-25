@@ -2,7 +2,7 @@
 // import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/navigation";  
 import Hero from "./components/ui/hero";
-import HotelListing from "@/components/ui/hotelcard";  
+import HotelListing from "./components/ui/hotelListing";
 
 
 

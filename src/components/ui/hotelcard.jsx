@@ -1,40 +1,36 @@
+function Hotelcard(props) {
+console.log(props);
+  return (
+ 
+<div className="flex gap-4 my-0.5 "> 
 
-function HotelListing (){
-    
-    const hotels = 
-        {
-            id: 1,
-            name: "Hotel 1",
-            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            description: "This is a hotel description",
-            rating: 4.5,
-            location: "New York, USA",
-            price: 200,
-           
-        };
-
-           return ( 
-
-            <div key={hotels.id} className="max-w-xs w-full overflow-x-auto bg-white rounded-xl shadow-md overflow-hidden mx-3 my-3">
-            {/* Image */}
-            <img src={hotels.image} alt={hotels.name} className="w-full h-36 object-cover" />
-      
-            {/* Content */}
-            <div className="p-3">
-              <h2 className="text-lg font-semibold">{hotels.name}</h2>
-              <p className="text-gray-500 text-xs">{hotels.location}</p>
-              <p className="text-gray-700 mt-1 text-sm line-clamp-2">{hotels.description}</p>
-      
-              {/* Rating & Price */}
-              <div className="flex justify-between items-center mt-2">
-                <span className="text-yellow-500 font-semibold text-sm">⭐ {hotels.rating}</span>
-                <span className="text-base font-bold text-gray-800">${hotels.price}</span>
-              </div>
-            </div>
+      <div className="block group relative w-64 bg-white rounded-xl shadow-lg border border-gray-200 p-3">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+          <img
+            src={props.hotel.image}
+            alt={props.hotel.name}
+            className="object-cover w-full h-full absolute transition-transform group-hover:scale-105"
+          />
+        </div>
+        <div className="mt-3 space-y-2">
+          <h3 className="font-semibold text-lg">{props.hotel.name}</h3>
+          <div className="flex items-center text-gray-500">
+            <span>{props.hotel.location}</span>
+           </div>
+           <div className="flex items-center space-x-1">
+            <span className="font-medium">{props.hotel.rating}</span>
+            <span className="text-gray-500">{props.hotel.description}</span>
           </div>
+          <div className="flex items-baseline space-x-2">
+            <span className="text-xl font-bold">${props.hotel.price}</span>
+          </div>
+        </div>
+      </div>
 
-);
 
-}    
+    </div>
 
-export default HotelListing;
+  );
+}
+
+export default Hotelcard;
